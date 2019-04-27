@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace LdJam44.Sandbox
+namespace LdJam44.Player
 {
     public class PlayerMotor : MonoBehaviour
     {

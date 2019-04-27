@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace LdJam44.Sandbox
+namespace LdJam44.Managers
 {
     public class LaneManager : MonoBehaviour
     {

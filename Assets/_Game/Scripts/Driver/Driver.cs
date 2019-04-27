@@ -1,7 +1,8 @@
-using System;
+using LdJam44.Managers;
+using LdJam44.Variables;
 using UnityEngine;
 
-namespace LdJam44.Sandbox
+namespace LdJam44.Driver
 {
     public class Driver : MonoBehaviour
     {
@@ -15,7 +16,7 @@ namespace LdJam44.Sandbox
 
         [Header("Diagnostics")]
         [SerializeField]
-        private int CurrentLane;
+        private IntVariable CurrentLane;
 
         [SerializeField]
         private float TargetZPosition;
@@ -35,7 +36,7 @@ namespace LdJam44.Sandbox
 
             TargetZPosition = LaneManager.Lanes[laneNumber].z;
 
-            CurrentLane = laneNumber;
+            CurrentLane.Value = laneNumber;
         }
 
         private void FixedUpdate()
