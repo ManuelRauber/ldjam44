@@ -108,6 +108,9 @@ MonoBehaviour:
   LaneManager: {fileID: 0}
   Rigidbody: {fileID: 808963192280589571}
   TargetZPosition: 0
+  IsSwitchingLanes: 0
+  LaneSwitchTolerance: 0.25
+  DriverXPosition: {fileID: 11400000, guid: ba6a6278e159d41cb9c51dfd0e2a2c41, type: 2}
   LaneNumber: 1
 --- !u!54 &808963192280589571
 Rigidbody:

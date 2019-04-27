@@ -26,6 +26,7 @@ namespace LdJam44.Driver
 
         private void Update()
         {
+#if DEBUG
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 SwitchLane(CurrentLane + 1);
@@ -35,6 +36,7 @@ namespace LdJam44.Driver
             {
                 SwitchLane(CurrentLane - 1);
             }
+#endif
 
             if (HasEnemyInFront() && !IsSwitchingLanes && _timeToNextSensorScan > Time.time)
             {
@@ -46,8 +48,8 @@ namespace LdJam44.Driver
                 if (!CanSwitchLane(nextLane))
                 {
                     nextLane = CurrentLane - nextLaneModifier;
-                } 
-                
+                }
+
                 SwitchLane(nextLane);
             }
         }

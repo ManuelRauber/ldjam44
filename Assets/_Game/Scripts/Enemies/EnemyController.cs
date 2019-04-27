@@ -1,10 +1,15 @@
+using System;
 using LdJam44.Driver;
+using LdJam44.Variables;
 using UnityEngine;
 
 namespace LdJam44.Enemies
 {
     public class EnemyController : DriverBaseController
     {
+        [Header("References")]
+        public FloatVariable DriverXPosition;
+        
         [Header("Diagnostics")]
         public int LaneNumber;
 
@@ -27,14 +32,10 @@ namespace LdJam44.Enemies
                 lane.Reverse ? -lane.Speed : lane.Speed, 
                 0, 
                 TargetZPosition - transform.position.z);
-        }
 
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.CompareTag(Tags.DestroyBarrier))
+            if (Math.Abs(DriverXPosition - transform.position.x) > 40)
             {
-                Debug.Log("Destroy Barrier hit. Going to die :-(");
-                Destroy(gameObject, 15f);
+                Destroy(gameObject);
             }
         }
     }
