@@ -105,11 +105,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23f63c6765d041dcbec5aa7ca990d13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LaneManager: {fileID: 0}
   Rigidbody: {fileID: 808963192280589571}
   TargetZPosition: 0
   IsSwitchingLanes: 0
   LaneSwitchTolerance: 0.25
+  Lanes: {fileID: 11400000, guid: c7e00c2a6104244d0bb15a185b129ef5, type: 2}
   DriverXPosition: {fileID: 11400000, guid: ba6a6278e159d41cb9c51dfd0e2a2c41, type: 2}
   LaneNumber: 1
 --- !u!54 &808963192280589571

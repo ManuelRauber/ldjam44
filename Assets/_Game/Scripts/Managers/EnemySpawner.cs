@@ -11,14 +11,13 @@ namespace LdJam44.Managers
         [Header("References")]
         public GameObject[] EnemyPrefabs;
 
-        public LaneManager LaneManager;
-
         [Header("Variables")]
         public float SpawnRate = 0.5f;
 
         public bool IsSpawningEnabled = true;
         public FloatVariable DriverXPosition;
         public Vector2 SpawnOffset = new Vector2(30, 0);
+        public LanesVariable Lanes;
 
         private float _timeToNextSpawn;
 
@@ -49,8 +48,7 @@ namespace LdJam44.Managers
             enemy.transform.SetParent(transform);
 
             var enemyController = enemy.GetComponent<EnemyController>();
-            enemyController.LaneManager = LaneManager;
-            enemyController.SwitchLane(Random.Range(0, LaneManager.Lanes.Length));
+            enemyController.SwitchLane(Random.Range(0, Lanes.Value.Length));
         }
     }
 }

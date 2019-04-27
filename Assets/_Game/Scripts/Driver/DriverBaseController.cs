@@ -1,5 +1,6 @@
 using System;
 using LdJam44.Managers.Lanes;
+using LdJam44.Variables;
 using UnityEngine;
 
 namespace LdJam44.Driver
@@ -7,8 +8,6 @@ namespace LdJam44.Driver
     public abstract class DriverBaseController : MonoBehaviour
     {
         [Header("References")]
-        public LaneManager LaneManager;
-
         public Rigidbody Rigidbody;
 
         [Header("Diagnostics")]
@@ -21,7 +20,9 @@ namespace LdJam44.Driver
         [Header("Variables")]
         public float LaneSwitchTolerance = 0.25f;
 
-        public void SwitchLane(int laneNumber)
+        public LanesVariable Lanes;
+
+        public virtual void SwitchLane(int laneNumber)
         {
             if (!CanSwitchLane(laneNumber))
             {
@@ -30,14 +31,14 @@ namespace LdJam44.Driver
 
             IsSwitchingLanes = true;
 
-            TargetZPosition = LaneManager.Lanes[laneNumber].Position.z;
+            TargetZPosition = Lanes.Value[laneNumber].Position.z;
 
             InternalLaneSwitch(laneNumber);
         }
 
         protected bool CanSwitchLane(int laneNumber)
         {
-            return laneNumber >= 0 && laneNumber < LaneManager.Lanes.Length && !IsSwitchingLanes;
+            return laneNumber >= 0 && laneNumber < Lanes.Value.Length && !IsSwitchingLanes;
         }
 
         protected virtual void FixedUpdate()

@@ -25,9 +25,7 @@ namespace LdJam44.Enemies
         
         protected override void FixedUpdate()
         {
-            base.FixedUpdate();
-            
-            var lane = LaneManager.Lanes[LaneNumber];
+            var lane = Lanes.Value[LaneNumber];
             Rigidbody.velocity = new Vector3(
                 lane.Reverse ? -lane.Speed : lane.Speed, 
                 0, 
