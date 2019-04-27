@@ -13,28 +13,28 @@ MonoBehaviour:
   m_Name: Lanes
   m_EditorClassIdentifier: 
   InitialValue:
-  - Position: {x: 0, y: 0.1, z: -3.75}
+  - Position: {x: 0, y: 0.1, z: -1.18}
     Speed: 2
     Reverse: 0
-  - Position: {x: 0, y: 0.1, z: -1.35}
+  - Position: {x: 0, y: 0.1, z: -0.39}
     Speed: 4
     Reverse: 0
-  - Position: {x: 0, y: 0.1, z: 1.35}
+  - Position: {x: 0, y: 0.1, z: 0.48}
     Speed: 4
     Reverse: 1
-  - Position: {x: 0, y: 0.1, z: 3.75}
+  - Position: {x: 0, y: 0.1, z: 1.31}
     Speed: 2
     Reverse: 1
   Value:
-  - Position: {x: 0, y: 0.1, z: -3.75}
+  - Position: {x: 0, y: 0.1, z: -1.18}
     Speed: 2
     Reverse: 0
-  - Position: {x: 0, y: 0.1, z: -1.35}
+  - Position: {x: 0, y: 0.1, z: -0.39}
     Speed: 4
     Reverse: 0
-  - Position: {x: 0, y: 0.1, z: 1.35}
+  - Position: {x: 0, y: 0.1, z: 0.48}
     Speed: 4
     Reverse: 1
-  - Position: {x: 0, y: 0.1, z: 3.75}
+  - Position: {x: 0, y: 0.1, z: 1.31}
     Speed: 2
     Reverse: 1

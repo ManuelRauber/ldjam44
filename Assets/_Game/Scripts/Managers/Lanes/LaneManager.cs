@@ -10,7 +10,7 @@ namespace LdJam44.Managers.Lanes
 
         public FloatVariable LaneWidth;
 
-        private void OnDrawGizmosSelected()
+        private void OnDrawGizmos()
         {
             if (Lanes == null)
             {

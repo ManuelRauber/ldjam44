@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1fc6dc38ffd418b848ff39ae7f07108, type: 3}
   m_Name: Lane Width
   m_EditorClassIdentifier: 
-  InitialValue: 1.84
+  InitialValue: 0.6
+  Value: 0.6

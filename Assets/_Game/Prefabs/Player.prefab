@@ -125,7 +125,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 0}
   m_Anchor: {x: 0.5, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 0
-  m_ConnectedAnchor: {x: -0.5, y: -0.25, z: 0}
+  m_ConnectedAnchor: {x: -0.71, y: 0.21, z: 0}
   serializedVersion: 2
   m_Spring: 250
   m_Damper: 0.2
