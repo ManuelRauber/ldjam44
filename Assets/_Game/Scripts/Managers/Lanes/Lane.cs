@@ -8,5 +8,6 @@ namespace LdJam44.Managers.Lanes
     {
         public Vector3 Position;
         public float Speed = 5;
+        public bool Reverse;
     }
 }

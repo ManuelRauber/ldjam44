@@ -443,13 +443,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lanes:
   - Position: {x: 0, y: 0.1, z: -3.75}
-    Speed: 5
+    Speed: 3
+    Reverse: 0
   - Position: {x: 0, y: 0.1, z: -1.35}
-    Speed: 5
+    Speed: 7
+    Reverse: 0
   - Position: {x: 0, y: 0.1, z: 1.35}
-    Speed: 5
+    Speed: 7
+    Reverse: 1
   - Position: {x: 0, y: 0.1, z: 3.75}
-    Speed: 5
+    Speed: 3
+    Reverse: 1
   LaneSize: 1.84
 --- !u!1 &1082744760
 GameObject:
@@ -460,6 +464,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1082744761}
+  - component: {fileID: 1082744762}
   m_Layer: 0
   m_Name: Enemies
   m_TagString: Untagged
@@ -475,12 +480,31 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082744760}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.10204083, y: 0, z: -0.07499999}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1082744762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082744760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce8a8389c2e4b8fb1df7afde2b6a6c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyPrefabs:
+  - {fileID: 676083081524220988, guid: 98d684b2af7f14d3d86a0ce9b670dfbb, type: 3}
+  LaneManager: {fileID: 862668317}
+  SpawnRate: 0.5
+  IsSpawningEnabled: 1
+  DriverXPosition: {fileID: 11400000, guid: ba6a6278e159d41cb9c51dfd0e2a2c41, type: 2}
+  SpawnOffset: {x: 40, y: 0.5}
 --- !u!4 &1748045780 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 554223383259237841, guid: 4ea26463851ba4c728e006beb903d5bd,
@@ -493,97 +517,6 @@ Rigidbody:
     type: 3}
   m_PrefabInstance: {fileID: 554223384734515717}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1905237510
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1905237514}
-  - component: {fileID: 1905237513}
-  - component: {fileID: 1905237512}
-  - component: {fileID: 1905237511}
-  m_Layer: 0
-  m_Name: Enemy
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!135 &1905237511
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1905237510}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1905237512
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1905237510}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &1905237513
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1905237510}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1905237514
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1905237510}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1972238766
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,6 +735,11 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1748045780}
+    - target: {fileID: 4900946377252325813, guid: e5b53881ccd6847329654b603cfbc5c4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5b53881ccd6847329654b603cfbc5c4, type: 3}
 --- !u!1001 &554223384734515717
@@ -873,20 +811,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5596851560119041773, guid: 4ea26463851ba4c728e006beb903d5bd,
         type: 3}
-      propertyPath: Rigidbody
-      value: 
-      objectReference: {fileID: 1748045781}
-    - target: {fileID: 5596851560119041773, guid: 4ea26463851ba4c728e006beb903d5bd,
-        type: 3}
-      propertyPath: CurrentLane
-      value: 
-      objectReference: {fileID: 11400000, guid: 1abd71b7463ea46b49c67e7a63a8b8e5,
-        type: 2}
-    - target: {fileID: 5596851560119041773, guid: 4ea26463851ba4c728e006beb903d5bd,
-        type: 3}
       propertyPath: LaneManager
       value: 
       objectReference: {fileID: 862668317}
+    - target: {fileID: 5596851560119041773, guid: 4ea26463851ba4c728e006beb903d5bd,
+        type: 3}
+      propertyPath: SensorDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ea26463851ba4c728e006beb903d5bd, type: 3}
 --- !u!1001 &5851955390595349874
