@@ -183,4 +183,4 @@ MonoBehaviour:
   Lanes: {fileID: 11400000, guid: c7e00c2a6104244d0bb15a185b129ef5, type: 2}
   DriverLane: {fileID: 11400000, guid: 1abd71b7463ea46b49c67e7a63a8b8e5, type: 2}
   SensorDistance: 7
-  NonDriverLaneSensorMultiplier: 1.5
+  NonDriverLaneSensorMultiplier: 1.25

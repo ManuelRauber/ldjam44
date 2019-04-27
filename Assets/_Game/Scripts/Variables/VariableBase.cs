@@ -19,6 +19,6 @@ namespace LdJam44.Variables
         public static implicit operator T(VariableBase<T> variable)
         {
             return variable.Value;
-        }   
+        }
     }
 }
