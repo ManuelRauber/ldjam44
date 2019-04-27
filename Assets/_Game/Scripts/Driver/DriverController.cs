@@ -1,6 +1,8 @@
+using System;
 using System.Linq;
 using LdJam44.Variables;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace LdJam44.Driver
 {
@@ -10,6 +12,7 @@ namespace LdJam44.Driver
         public float DriverSpeed = 5f;
 
         public float SensorScanDelay = 0.25f;
+        public float BreakModifier = 0.5f;
 
         public IntVariable CurrentLane;
         public FloatVariable XPosition;
@@ -21,14 +24,26 @@ namespace LdJam44.Driver
         [SerializeField]
         private float MaxAllowedSpeed;
 
+        [SerializeField]
+        private float CurrentSpeed;
+
+        [SerializeField]
+        private float TBreakInterpolator;
+
+        [SerializeField]
+        private bool IsBreaking;
+
         private void Start()
         {
+            MaxAllowedSpeed = DriverSpeed;
             _timeToNextSensorScan = Time.time;
             SwitchLane(CurrentLane);
         }
 
         private void Update()
         {
+            TBreakInterpolator = Mathf.Clamp01(TBreakInterpolator + BreakModifier * Time.deltaTime);
+
 #if DEBUG
             if (Input.GetKeyDown(KeyCode.Q))
             {
@@ -47,7 +62,10 @@ namespace LdJam44.Driver
         public override void SwitchLane(int laneNumber)
         {
             base.SwitchLane(laneNumber);
+            CurrentSpeed = MaxAllowedSpeed;
             MaxAllowedSpeed = DriverSpeed;
+            TBreakInterpolator = 0;
+            IsBreaking = false;
         }
 
         private void SwitchLaneIfNecessary()
@@ -74,16 +92,24 @@ namespace LdJam44.Driver
                 SwitchLane(nextLane);
                 return;
             }
-            
+
             nextLane = CurrentLane - nextLaneModifier;
-            
+
             if (CanSwitchLane(nextLane) && !scanResult.Results.Single(p => p.LaneNumber == nextLane).HasHit)
             {
                 SwitchLane(nextLane);
                 return;
             }
 
+            if (IsBreaking)
+            {
+                return;
+            }
+
+            IsBreaking = true;
+            CurrentSpeed = DriverSpeed;
             MaxAllowedSpeed = Lanes.Value[CurrentLane].Speed;
+            TBreakInterpolator = 0;
         }
 
         protected override void InternalLaneSwitch(int laneNumber)
@@ -96,7 +122,8 @@ namespace LdJam44.Driver
         {
             base.FixedUpdate();
 
-            Rigidbody.velocity = new Vector3(MaxAllowedSpeed, 0, TargetZPosition - transform.position.z);
+            Rigidbody.velocity = new Vector3(
+                Mathf.Lerp(CurrentSpeed, MaxAllowedSpeed, TBreakInterpolator), 0, TargetZPosition - transform.position.z);
         }
 
         private void LateUpdate()

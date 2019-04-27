@@ -127,12 +127,16 @@ MonoBehaviour:
   IsSwitchingLanes: 0
   LaneSwitchTolerance: 0.4
   Lanes: {fileID: 11400000, guid: c7e00c2a6104244d0bb15a185b129ef5, type: 2}
-  DriverSpeed: 5
+  DriverSpeed: 7
   SensorScanDelay: 0.25
+  BreakModifier: 0.5
   CurrentLane: {fileID: 11400000, guid: 1abd71b7463ea46b49c67e7a63a8b8e5, type: 2}
   XPosition: {fileID: 11400000, guid: ba6a6278e159d41cb9c51dfd0e2a2c41, type: 2}
   Sensors: {fileID: 1564188089273892877}
   MaxAllowedSpeed: 0
+  CurrentSpeed: 0
+  TBreakInterpolator: 0
+  IsBreaking: 0
 --- !u!1 &5072252201016994222
 GameObject:
   m_ObjectHideFlags: 0
