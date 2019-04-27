@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace LdJam44.Variables
@@ -5,6 +6,8 @@ namespace LdJam44.Variables
     public abstract class VariableBase<T> : ScriptableObject, ISerializationCallbackReceiver
     {
         public T InitialValue;
+        
+        [NonSerialized]
         public T Value;
 
         public void OnBeforeSerialize()

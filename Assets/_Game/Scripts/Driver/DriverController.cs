@@ -1,10 +1,10 @@
-using LdJam44.Managers;
+using LdJam44.Managers.Lanes;
 using LdJam44.Variables;
 using UnityEngine;
 
 namespace LdJam44.Driver
 {
-    public class Driver : MonoBehaviour
+    public class DriverController : MonoBehaviour
     {
         [Header("References")]
         public LaneManager LaneManager;
@@ -15,8 +15,7 @@ namespace LdJam44.Driver
         public float DriverSpeed = 5f;
 
         [Header("Diagnostics")]
-        [SerializeField]
-        private IntVariable CurrentLane;
+        public IntVariable CurrentLane;
 
         [SerializeField]
         private float TargetZPosition;
@@ -34,7 +33,7 @@ namespace LdJam44.Driver
                 return;
             }
 
-            TargetZPosition = LaneManager.Lanes[laneNumber].z;
+            TargetZPosition = LaneManager.Lanes[laneNumber].Position.z;
 
             CurrentLane.Value = laneNumber;
         }

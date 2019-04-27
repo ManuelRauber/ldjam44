@@ -1,9 +1,9 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace LdJam44._Game.Sandbox.Editor
+namespace LdJam44._Game.Editor
 {
-    [CustomEditor(typeof(Driver.Driver))]
+    [CustomEditor(typeof(Driver.DriverController))]
     public class DriverEditor : UnityEditor.Editor
     {
         private int _laneToSwitchTo;
@@ -12,7 +12,7 @@ namespace LdJam44._Game.Sandbox.Editor
         {
             base.OnInspectorGUI();
 
-            var driver = (Driver.Driver) target;
+            var driver = (Driver.DriverController) target;
 
             _laneToSwitchTo = EditorGUILayout.IntField("Lane to switch to", _laneToSwitchTo);
             
