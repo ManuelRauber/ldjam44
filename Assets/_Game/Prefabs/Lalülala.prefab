@@ -198,6 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LightSpeed: 8
+  isBlueLightOn: 1
 --- !u!1 &344849887197826661
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 344849887197826666}
   m_Layer: 0
-  m_Name: "Lal\xFClala"
+  m_Name: "Lalu\u0308lala"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -521,3 +522,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LightSpeed: 8
+  isBlueLightOn: 1
