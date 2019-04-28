@@ -16,6 +16,9 @@ namespace LdJam44.Driver
 
         [SerializeField]
         protected bool IsSwitchingLanes;
+        
+        [SerializeField]
+        protected float MaxAllowedSpeed;
 
         [Header("Variables")]
         public float LaneSwitchTolerance = 0.25f;

@@ -9,7 +9,7 @@ namespace LdJam44.Enemies
     {
         [Header("References")]
         public FloatVariable DriverXPosition;
-        
+
         [Header("Diagnostics")]
         public int LaneNumber;
 
@@ -21,15 +21,13 @@ namespace LdJam44.Enemies
         protected override void InternalLaneSwitch(int laneNumber)
         {
             LaneNumber = laneNumber;
+            var lane = Lanes.Value[LaneNumber];
+            MaxAllowedSpeed = lane.Reverse ? -lane.Speed : lane.Speed;
         }
-        
+
         protected override void FixedUpdate()
         {
-            var lane = Lanes.Value[LaneNumber];
-            Rigidbody.velocity = new Vector3(
-                lane.Reverse ? -lane.Speed : lane.Speed, 
-                0, 
-                TargetZPosition - transform.position.z);
+            Rigidbody.velocity = new Vector3(MaxAllowedSpeed, 0, TargetZPosition - transform.position.z);
 
             if (Math.Abs(DriverXPosition - transform.position.x) > 40)
             {

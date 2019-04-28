@@ -19,9 +19,6 @@ namespace LdJam44.Driver
 
         [Header("Diagnostics")]
         [SerializeField]
-        private float MaxAllowedSpeed;
-
-        [SerializeField]
         private float CurrentSpeed;
 
         [SerializeField]
