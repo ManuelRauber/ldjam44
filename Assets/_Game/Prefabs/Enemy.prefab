@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 808963192280589571}
   - component: {fileID: 5495898117236547244}
   - component: {fileID: 1451003452461566629}
+  - component: {fileID: 8839116046227780378}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Enemy
@@ -50,6 +51,7 @@ MonoBehaviour:
   Rigidbody: {fileID: 808963192280589571}
   TargetZPosition: 0
   IsSwitchingLanes: 0
+  MaxAllowedSpeed: 0
   LaneSwitchTolerance: 0.25
   Lanes: {fileID: 11400000, guid: c7e00c2a6104244d0bb15a185b129ef5, type: 2}
   DriverXPosition: {fileID: 11400000, guid: ba6a6278e159d41cb9c51dfd0e2a2c41, type: 2}
@@ -99,6 +101,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2337263, y: 1.03, z: 0.58272326}
   m_Center: {x: 0, y: 0.42, z: 0}
+--- !u!114 &8839116046227780378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676083081524220988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83df9637086f40719cb4e4bb4d2ed4ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: b2b7ee09f2f924938b13890e522f2a0e, type: 2}
+  UnityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1905237511}
+        m_MethodName: GameOver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &7820230045899395657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -106,11 +137,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 676083081524220976}
     m_Modifications:
-    - target: {fileID: 7324050637053053796, guid: 2c5a8cc511bd0ee40b24a48247181ad8,
-        type: 3}
-      propertyPath: m_Name
-      value: sportsCar
-      objectReference: {fileID: 0}
     - target: {fileID: 6052583804979362167, guid: 2c5a8cc511bd0ee40b24a48247181ad8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -165,6 +191,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324050637053053796, guid: 2c5a8cc511bd0ee40b24a48247181ad8,
+        type: 3}
+      propertyPath: m_Name
+      value: sportsCar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c5a8cc511bd0ee40b24a48247181ad8, type: 3}

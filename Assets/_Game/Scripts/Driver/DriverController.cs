@@ -38,6 +38,12 @@ namespace LdJam44.Driver
 
         private void Update()
         {
+            if (IsGameOver)
+            {
+                MaxAllowedSpeed = 0;
+                return;
+            }
+            
             TBreakInterpolator = Mathf.Clamp01(TBreakInterpolator + BreakModifier * Time.deltaTime);
 
 #if DEBUG

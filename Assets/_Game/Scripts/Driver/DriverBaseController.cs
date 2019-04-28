@@ -20,6 +20,9 @@ namespace LdJam44.Driver
         [SerializeField]
         protected float MaxAllowedSpeed;
 
+        [SerializeField]
+        protected bool IsGameOver;
+
         [Header("Variables")]
         public float LaneSwitchTolerance = 0.25f;
 
@@ -50,5 +53,11 @@ namespace LdJam44.Driver
         }
 
         protected abstract void InternalLaneSwitch(int laneNumber);
+
+        public virtual void GameOver()
+        {
+            MaxAllowedSpeed = 0;
+            IsGameOver = true;
+        }
     }
 }

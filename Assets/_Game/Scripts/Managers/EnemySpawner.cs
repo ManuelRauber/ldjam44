@@ -56,5 +56,10 @@ namespace LdJam44.Managers
                 enemy.transform.eulerAngles = new Vector3(0, 180, 0);
             }
         }
+
+        public void GameOver()
+        {
+            IsSpawningEnabled = false;
+        }
     }
 }
