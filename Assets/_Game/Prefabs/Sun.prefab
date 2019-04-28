@@ -108,10 +108,10 @@ MonoBehaviour:
   SunDawnEvent: {fileID: 11400000, guid: b17c81aa6cbd34e5a9dafe1dd71df9dc, type: 2}
   SunRiseEvent: {fileID: 11400000, guid: 4a1ebee8bf72c4418afa7cbe5b681b2d, type: 2}
   MaxIntensity: 4
-  DayPercentage: 0.7
+  DayPercentage: 0.6
   SunRisePercentageOfDayPercentage: 0.2
-  SunDawnPercentageOfNightPercentage: 0.5
-  DayNightCycleTimeInSeconds: 45
+  SunDawnPercentageOfNightPercentage: 0.4
+  DayNightCycleTimeInSeconds: 35
   StartAtDay: 1
   DayTimeLength: 0
   SunRiseLength: 0

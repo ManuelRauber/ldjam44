@@ -6,11 +6,6 @@ namespace LdJam44.Driver
 {
     public class DriverController : DriverBaseController
     {
-        [Header("References")]
-        public Animator Animator;
-
-        public JumpSensor JumpSensor;
-
         [Header("Variables")]
         public float DriverSpeed = 5f;
 
@@ -35,32 +30,6 @@ namespace LdJam44.Driver
 
         [SerializeField]
         private bool IsBreaking;
-
-        [SerializeField]
-        private bool IsJumping;
-
-        private static readonly int JumpAnimationTrigger = Animator.StringToHash("Jump");
-
-        private void OnEnable()
-        {
-            JumpSensor.JumpRequested += JumpRequested;
-        }
-
-        private void OnDisable()
-        {
-            JumpSensor.JumpRequested -= JumpRequested;
-        }
-
-        private void JumpRequested()
-        {
-            if (IsJumping || !Lanes.Value[CurrentLane].Reverse)
-            {
-                return;
-            }
-            
-            IsJumping = true;
-            Animator.SetTrigger(JumpAnimationTrigger);
-        }
 
         private void Start()
         {
@@ -163,11 +132,6 @@ namespace LdJam44.Driver
         private void LateUpdate()
         {
             XPosition.Value = transform.position.x;
-        }
-
-        public void JumpDone()
-        {
-            IsJumping = false;
         }
     }
 }
