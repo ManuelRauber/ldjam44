@@ -43,6 +43,13 @@ namespace LdJam44.World
             CurrentX++;
             var streetTile = StreetQueue.Dequeue();
             streetTile.transform.position = new Vector3(CurrentX * StreetXPlacement, 0, 0);
+
+            var treeAreas = streetTile.GetComponentsInChildren<TreeSpawner>();
+            foreach (var treeSpawner in treeAreas)
+            {
+                treeSpawner.RepositionTrees();
+            }
+            
             StreetQueue.Enqueue(streetTile);
         }
 

@@ -4,5 +4,6 @@ namespace LdJam44
     {
         public static readonly string Game = "Game";
         public static readonly string MrUnicornator = "MrUnicornator";
+        public static readonly string MainMenu = "MainMenu";
     }
 }

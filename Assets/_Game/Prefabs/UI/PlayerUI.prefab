@@ -114,9 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FillContainer: {fileID: 8704936655076645436}
-  PointsText: {fileID: 2277812028933184807}
   PlayerLife: {fileID: 11400000, guid: 90de8938416534b929f15c3961a27169, type: 2}
-  Points: {fileID: 11400000, guid: 495614e7862694e2dbfa85f22d08ab3a, type: 2}
 --- !u!1001 &2436864622201814457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -275,6 +273,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Points
       objectReference: {fileID: 0}
+    - target: {fileID: 4634483840210798976, guid: 713287323a978496daf8e2acd68a78cf,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634483840210798976, guid: 713287323a978496daf8e2acd68a78cf,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634483840210798976, guid: 713287323a978496daf8e2acd68a78cf,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8605289850399918780, guid: 713287323a978496daf8e2acd68a78cf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -380,24 +393,49 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6650775817329700980, guid: 713287323a978496daf8e2acd68a78cf,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650775817329700980, guid: 713287323a978496daf8e2acd68a78cf,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650775817329700980, guid: 713287323a978496daf8e2acd68a78cf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650775817329700980, guid: 713287323a978496daf8e2acd68a78cf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4898928409730892179, guid: 713287323a978496daf8e2acd68a78cf,
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 200
       objectReference: {fileID: 0}
-    - target: {fileID: 4634483840210798976, guid: 713287323a978496daf8e2acd68a78cf,
+    - target: {fileID: 4898928409730892179, guid: 713287323a978496daf8e2acd68a78cf,
         type: 3}
-      propertyPath: m_fontSize
-      value: 60
+      propertyPath: m_AnchorMin.y
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4634483840210798976, guid: 713287323a978496daf8e2acd68a78cf,
+    - target: {fileID: 4898928409730892179, guid: 713287323a978496daf8e2acd68a78cf,
         type: 3}
-      propertyPath: m_fontSizeBase
-      value: 60
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4634483840210798976, guid: 713287323a978496daf8e2acd68a78cf,
+    - target: {fileID: 4898928409730892179, guid: 713287323a978496daf8e2acd68a78cf,
         type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898928409730892179, guid: 713287323a978496daf8e2acd68a78cf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6908748667212544103, guid: 713287323a978496daf8e2acd68a78cf,
@@ -423,15 +461,3 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 6903058936348349607}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2277812028933184807 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4634483840210798976, guid: 713287323a978496daf8e2acd68a78cf,
-    type: 3}
-  m_PrefabInstance: {fileID: 6903058936348349607}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
