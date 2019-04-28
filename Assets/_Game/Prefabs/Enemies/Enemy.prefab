@@ -52,6 +52,7 @@ MonoBehaviour:
   TargetZPosition: 0
   IsSwitchingLanes: 0
   MaxAllowedSpeed: 0
+  IsGameOver: 0
   LaneSwitchTolerance: 0.25
   Lanes: {fileID: 11400000, guid: c7e00c2a6104244d0bb15a185b129ef5, type: 2}
   DriverXPosition: {fileID: 11400000, guid: ba6a6278e159d41cb9c51dfd0e2a2c41, type: 2}

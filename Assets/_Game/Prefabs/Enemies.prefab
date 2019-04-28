@@ -45,7 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyPrefabs:
-  - {fileID: 676083081524220988, guid: 98d684b2af7f14d3d86a0ce9b670dfbb, type: 3}
+  - {fileID: 8944272473491515168, guid: 4dffdb053c91a4be3850fdba843c09eb, type: 3}
+  - {fileID: 5723937615383348001, guid: c05951123d6334c36b6e191523cc5c66, type: 3}
+  - {fileID: 3418014628432601693, guid: b0fd15ca066e544f1a954e08efab5c17, type: 3}
+  - {fileID: 1649775891390416364, guid: 753823ec0ef774547a5162adf434e496, type: 3}
   SpawnRate: 0.5
   IsSpawningEnabled: 1
   DriverXPosition: {fileID: 11400000, guid: ba6a6278e159d41cb9c51dfd0e2a2c41, type: 2}
