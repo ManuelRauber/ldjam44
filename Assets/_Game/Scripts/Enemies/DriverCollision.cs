@@ -14,7 +14,7 @@ namespace LdJam44.Enemies
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag(Tags.Driver))
+            if (other.CompareTag(Tags.Driver) || other.CompareTag(Tags.Player))
             {
                 Destroy(EnemyController);
                 Rigidbody.AddForce(Vector3.up * UpForce, ForceMode.VelocityChange);

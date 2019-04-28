@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5288163651414492693}
   - component: {fileID: 2007724282778543246}
   - component: {fileID: 5934130129194985178}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Poller
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -27,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5863549129873142473}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
   m_LocalPosition: {x: -6.14479, y: 1.3713512, z: 2.6467776}
   m_LocalScale: {x: 1.8944218, y: 1.8944218, z: 1.8944218}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!33 &1900481358581103340
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -87,7 +87,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5863549129873142473}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: f0af91b54f3a341cd8a4b29209468b79, type: 2}
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 3
@@ -105,5 +105,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 4.375999, z: 0.09421511}
-  m_Center: {x: 0, y: 2.1779993, z: 0.037107557}
+  m_Size: {x: 0.019999998, y: 5.1243153, z: 0.09421511}
+  m_Center: {x: 0, y: 2.11, z: 0.037107557}

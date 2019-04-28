@@ -23,13 +23,11 @@ namespace LdJam44.Player
 
         private void CollideWithEnemy(GameObject other)
         {
-            if (!other.CompareTag(Tags.Enemy))
+            if (other.CompareTag(Tags.Enemy) || other.CompareTag(Tags.Driver))
             {
-                return;
+                Life.Value -= 10;
+                PlayerHasBeenHitEvent.Raise();
             }
-            
-            Life.Value -= 10;
-            PlayerHasBeenHitEvent.Raise();
         }
     }
 }

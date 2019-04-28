@@ -74,6 +74,7 @@ MonoBehaviour:
   CurrentLane: {fileID: 11400000, guid: 1abd71b7463ea46b49c67e7a63a8b8e5, type: 2}
   XPosition: {fileID: 11400000, guid: ba6a6278e159d41cb9c51dfd0e2a2c41, type: 2}
   Sensors: {fileID: 1564188089273892877}
+  LaneSpeedSwitchModifier: 1.75
   MaxAllowedSpeed: 0
   CurrentSpeed: 0
   TBreakInterpolator: 0
@@ -89,8 +90,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.19, z: 0.4}
-  m_Center: {x: 0.39, y: 0.12, z: 0}
+  m_Size: {x: 0.86081314, y: 0.19, z: 0.4}
+  m_Center: {x: 0.032063484, y: 0.120000005, z: 0}
 --- !u!1 &5072252201016994222
 GameObject:
   m_ObjectHideFlags: 0
