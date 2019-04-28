@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2875495035188764466}
   - component: {fileID: 2875495035188764467}
+  - component: {fileID: 6733879529125958086}
   m_Layer: 0
   m_Name: Sun
   m_TagString: Untagged
@@ -91,3 +92,31 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &6733879529125958086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2875495035188764468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c07a2f760904454ba9be2d126450a692, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Light: {fileID: 2875495035188764467}
+  SunDawnEvent: {fileID: 11400000, guid: b17c81aa6cbd34e5a9dafe1dd71df9dc, type: 2}
+  SunRiseEvent: {fileID: 11400000, guid: 4a1ebee8bf72c4418afa7cbe5b681b2d, type: 2}
+  MaxIntensity: 4
+  DayPercentage: 0.7
+  SunRisePercentageOfDayPercentage: 0.2
+  SunDawnPercentageOfNightPercentage: 0.5
+  DayNightCycleTimeInSeconds: 45
+  StartAtDay: 1
+  DayTimeLength: 0
+  SunRiseLength: 0
+  NightTimeLength: 0
+  SunDawnLength: 0
+  CurrentDayNightCycle: 0
+  SunRiseEventRaised: 0
+  SunDawnEventRaised: 0
