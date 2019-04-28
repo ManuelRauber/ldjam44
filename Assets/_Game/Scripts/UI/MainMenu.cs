@@ -21,7 +21,7 @@ namespace LdJam44.UI
 #if DEBUG
             SceneManager.LoadScene(Scenes.MrUnicornator);
 #else
-            SceneManager.LoadScene(Scenes.Game);
+            SceneManager.LoadScene(Scenes.MrUnicornator);
 #endif
         }
 
