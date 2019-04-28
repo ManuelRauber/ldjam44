@@ -1,4 +1,7 @@
 using UnityEditor;
+#if !UNITY_EDITOR
+using UnityEngine;
+#endif
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 

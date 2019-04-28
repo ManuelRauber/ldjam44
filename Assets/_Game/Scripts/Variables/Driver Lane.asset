@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d141ac5c31a4b338cbb8b35fcbcf0e1, type: 3}
   m_Name: Driver Lane
   m_EditorClassIdentifier: 
-  InitialValue: 3
-  Value: 2
+  InitialValue: 0
+  Value: 0
