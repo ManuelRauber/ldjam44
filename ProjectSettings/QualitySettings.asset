@@ -196,7 +196,7 @@ QualitySettings:
     skinWeights: 4
     textureQuality: 0
     anisotropicTextures: 1
-    antiAliasing: 8
+    antiAliasing: 0
     softParticles: 1
     softVegetation: 1
     realtimeReflectionProbes: 1
@@ -219,5 +219,5 @@ QualitySettings:
   m_PerPlatformDefaultQuality:
     Android: 0
     Standalone: 5
-    WebGL: 0
+    WebGL: 5
     iPhone: 0
