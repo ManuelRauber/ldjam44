@@ -15,8 +15,7 @@ namespace LdJam44.Driver
         public IntVariable CurrentLane;
         public FloatVariable XPosition;
         public DriverSensors Sensors;
-
-        private float _timeToNextSensorScan;
+        public float LaneSpeedSwitchModifier = 1.75f;
 
         [Header("Diagnostics")]
         [SerializeField]
@@ -30,6 +29,8 @@ namespace LdJam44.Driver
 
         [SerializeField]
         private bool IsBreaking;
+        
+        private float _timeToNextSensorScan;
 
         private void Start()
         {
@@ -60,6 +61,11 @@ namespace LdJam44.Driver
         public override void SwitchLane(int laneNumber)
         {
             base.SwitchLane(laneNumber);
+            StopBreaking();
+        }
+
+        private void StopBreaking()
+        {
             CurrentSpeed = MaxAllowedSpeed;
             MaxAllowedSpeed = DriverSpeed;
             TBreakInterpolator = 0;
@@ -79,6 +85,11 @@ namespace LdJam44.Driver
 
             if (!scanResult.Results.Single(p => p.LaneNumber == CurrentLane).HasHit)
             {
+                if (IsBreaking)
+                {
+                    StopBreaking();
+                }
+                
                 return;
             }
 
@@ -126,7 +137,9 @@ namespace LdJam44.Driver
             base.FixedUpdate();
 
             Rigidbody.velocity = new Vector3(
-                Mathf.Lerp(CurrentSpeed, MaxAllowedSpeed, TBreakInterpolator), 0, TargetZPosition - transform.position.z);
+                Mathf.Lerp(CurrentSpeed, MaxAllowedSpeed, TBreakInterpolator), 
+                0, 
+                (TargetZPosition - transform.position.z) * LaneSpeedSwitchModifier);
         }
 
         private void LateUpdate()

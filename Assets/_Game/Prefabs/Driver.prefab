@@ -70,7 +70,7 @@ MonoBehaviour:
   Lanes: {fileID: 11400000, guid: c7e00c2a6104244d0bb15a185b129ef5, type: 2}
   DriverSpeed: 7
   SensorScanDelay: 0.1
-  BreakModifier: 0.5
+  BreakModifier: 0.68
   CurrentLane: {fileID: 11400000, guid: 1abd71b7463ea46b49c67e7a63a8b8e5, type: 2}
   XPosition: {fileID: 11400000, guid: ba6a6278e159d41cb9c51dfd0e2a2c41, type: 2}
   Sensors: {fileID: 1564188089273892877}
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lanes: {fileID: 11400000, guid: c7e00c2a6104244d0bb15a185b129ef5, type: 2}
   DriverLane: {fileID: 11400000, guid: 1abd71b7463ea46b49c67e7a63a8b8e5, type: 2}
-  SensorDistance: 7
+  SensorDistance: 5
   NonDriverLaneSensorMultiplier: 1.25
 --- !u!1001 &1863371755531489500
 PrefabInstance:

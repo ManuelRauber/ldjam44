@@ -33,7 +33,6 @@ namespace LdJam44.Enemies
 
             if (Math.Abs(DriverXPosition - transform.position.x) > 40)
             {
-                Debug.Log("Destroying EnemyController");
                 Destroy(gameObject);
             }
         }
