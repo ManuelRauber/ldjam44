@@ -68,6 +68,7 @@ MonoBehaviour:
   TargetZPosition: 0
   IsSwitchingLanes: 0
   MaxAllowedSpeed: 0
+  IsGameOver: 0
   LaneSwitchTolerance: 0.5
   Lanes: {fileID: 11400000, guid: c7e00c2a6104244d0bb15a185b129ef5, type: 2}
   DriverSpeed: 7
@@ -167,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lanes: {fileID: 11400000, guid: c7e00c2a6104244d0bb15a185b129ef5, type: 2}
   DriverLane: {fileID: 11400000, guid: 1abd71b7463ea46b49c67e7a63a8b8e5, type: 2}
-  SensorDistance: 5
+  SensorDistance: 5.75
   NonDriverLaneSensorMultiplier: 1
 --- !u!1001 &1863371755531489500
 PrefabInstance:

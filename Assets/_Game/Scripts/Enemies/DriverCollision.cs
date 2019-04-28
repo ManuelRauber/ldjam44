@@ -24,6 +24,11 @@ namespace LdJam44.Enemies
                 Rigidbody.AddTorque(Random.insideUnitSphere * UpForce, ForceMode.VelocityChange);
                 Rigidbody.useGravity = true;
             }
+
+            if (other.CompareTag(Tags.Enemy))
+            {
+                Destroy(gameObject);
+            }
         }
 
         private void Update()
