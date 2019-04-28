@@ -39,16 +39,19 @@ namespace LdJam44.Managers
 
         private void SpawnEnemy()
         {
+            var laneNumber = Random.Range(0, Lanes.Value.Length);
+            var lane = Lanes.Value[laneNumber];
+            
             var enemy = Instantiate(
                 EnemyPrefabs.PickOne(),
-                new Vector3(SpawnOffset.x + DriverXPosition, SpawnOffset.y),
+                new Vector3(SpawnOffset.x + DriverXPosition, SpawnOffset.y, lane.Position.z),
                 Quaternion.identity
             );
 
             enemy.transform.SetParent(transform);
 
             var enemyController = enemy.GetComponent<EnemyController>();
-            var laneNumber = Random.Range(0, Lanes.Value.Length);
+            
             enemyController.SwitchLane(laneNumber);
 
             if (Lanes.Value[laneNumber].Reverse)
