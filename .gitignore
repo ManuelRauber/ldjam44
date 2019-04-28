@@ -88,7 +88,7 @@ fabric.properties
 # [Aa]ssets/AssetStoreTools*
 
 # TextMesh Pro files
-[Aa]ssets/TextMesh*Pro/
+# [Aa]ssets/TextMesh*Pro/
 
 # Visual Studio cache directory
 .vs/
