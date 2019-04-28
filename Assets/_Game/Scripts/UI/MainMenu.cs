@@ -1,7 +1,5 @@
 using UnityEditor;
-#if !UNITY_EDITOR
 using UnityEngine;
-#endif
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
@@ -25,6 +23,14 @@ namespace LdJam44.UI
 #else
             SceneManager.LoadScene(Scenes.Game);
 #endif
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                Debug.developerConsoleVisible = !Debug.developerConsoleVisible;
+            }
         }
     }
 }

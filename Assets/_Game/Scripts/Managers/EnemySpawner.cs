@@ -48,7 +48,13 @@ namespace LdJam44.Managers
             enemy.transform.SetParent(transform);
 
             var enemyController = enemy.GetComponent<EnemyController>();
-            enemyController.SwitchLane(Random.Range(0, Lanes.Value.Length));
+            var laneNumber = Random.Range(0, Lanes.Value.Length);
+            enemyController.SwitchLane(laneNumber);
+
+            if (Lanes.Value[laneNumber].Reverse)
+            {
+                enemy.transform.eulerAngles = new Vector3(0, 180, 0);
+            }
         }
     }
 }

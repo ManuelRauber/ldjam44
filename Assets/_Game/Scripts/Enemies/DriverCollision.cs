@@ -8,6 +8,7 @@ namespace LdJam44.Enemies
         public EnemyController EnemyController;
 
         public Rigidbody Rigidbody;
+        public Collider Collider;
 
         [Header("Variables")]
         public float UpForce = 1500f;
@@ -17,7 +18,10 @@ namespace LdJam44.Enemies
             if (other.CompareTag(Tags.Driver) || other.CompareTag(Tags.Player))
             {
                 Destroy(EnemyController);
-                Rigidbody.AddForce(Vector3.up * UpForce, ForceMode.VelocityChange);
+                Destroy(Collider);
+                Rigidbody.constraints = RigidbodyConstraints.None;
+                Rigidbody.AddForce(Vector3.up * UpForce, ForceMode.VelocityChange); 
+                Rigidbody.AddTorque(Random.insideUnitSphere * UpForce, ForceMode.VelocityChange);
                 Rigidbody.useGravity = true;
             }
         }
