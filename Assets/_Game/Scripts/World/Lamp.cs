@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace LdJam44.World
 {
-    public class StreetLamp : MonoBehaviour
+    public class Lamp : MonoBehaviour
     {
         [Header("References")]
         public Light Light;
