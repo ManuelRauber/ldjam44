@@ -393,25 +393,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -6.11
       objectReference: {fileID: 0}
-    - target: {fileID: 4903839606630687702, guid: e5b53881ccd6847329654b603cfbc5c4,
+    - target: {fileID: 18289024246394583, guid: e5b53881ccd6847329654b603cfbc5c4,
         type: 3}
-      propertyPath: m_ClearFlags
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4903839606630687702, guid: e5b53881ccd6847329654b603cfbc5c4,
-        type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0.089926526
-      objectReference: {fileID: 0}
-    - target: {fileID: 4903839606630687702, guid: e5b53881ccd6847329654b603cfbc5c4,
-        type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0.4056604
-      objectReference: {fileID: 0}
-    - target: {fileID: 4903839606630687702, guid: e5b53881ccd6847329654b603cfbc5c4,
-        type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 0
+      propertyPath: antialiasingMode
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5b53881ccd6847329654b603cfbc5c4, type: 3}
