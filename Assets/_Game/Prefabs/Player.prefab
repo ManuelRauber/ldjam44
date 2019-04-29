@@ -344,7 +344,10 @@ MonoBehaviour:
   PlayerDispatchPoint: {fileID: 0}
   JointLine: {fileID: 5851955391232453885}
   Rigidbody: {fileID: 4406372765424911625}
+  BloodDecal: {fileID: 8840985547079844357, guid: e3c1a98cb39a846139b51ba76399d913,
+    type: 3}
   Life: {fileID: 11400000, guid: 90de8938416534b929f15c3961a27169, type: 2}
+  LifeDrainPerTwoSeconds: 1
   PlayerHasBeenHitEvent: {fileID: 11400000, guid: a878f7037896e478ea2d452ef88a07be,
     type: 2}
 --- !u!114 &6756501365796198825
