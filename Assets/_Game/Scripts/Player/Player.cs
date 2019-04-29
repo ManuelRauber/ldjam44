@@ -1,4 +1,3 @@
-using System.Collections;
 using LdJam44.EventSystem;
 using LdJam44.Variables;
 using UnityEngine;
@@ -43,11 +42,6 @@ namespace LdJam44.Player
                 Life.Value -= 10;
                 PlayerHasBeenHitEvent.Raise();
             }
-        }
-
-        public void StartupSequenceDone()
-        {
-            // ?
         }
 
         public void StartupTimelineDone()

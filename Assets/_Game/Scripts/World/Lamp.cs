@@ -9,12 +9,12 @@ namespace LdJam44.World
         
         public void SunRise()
         {
-            Light.gameObject.SetActive(false);
+            Light.enabled = false;
         }
 
         public void SunDawn()
         {
-            Light.gameObject.SetActive(true);
+            Light.enabled = true;
         }
     }
 }
