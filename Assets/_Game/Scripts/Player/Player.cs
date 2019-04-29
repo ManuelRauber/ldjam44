@@ -47,7 +47,7 @@ namespace LdJam44.Player
 
         public void StartupSequenceDone()
         {
-            Collider.enabled = true;
+            // ?
         }
 
         public void StartupTimelineDone()
@@ -63,6 +63,8 @@ namespace LdJam44.Player
             Rigidbody.MovePosition(PlayerDispatchPoint.position);
             Rigidbody.isKinematic = false;
             transform.rotation = Quaternion.identity;
+            
+            Collider.enabled = true;
         }
 
         public void DoorsOpenSignal()

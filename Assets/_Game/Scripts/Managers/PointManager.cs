@@ -9,16 +9,22 @@ namespace LdJam44.Managers
         [Header("Variables")]
         public IntVariable Points;
 
-        private int _initialXPosition;
+        private int _startPoint;
 
-        private void Start()
+        private void OnTriggerEnter(Collider other)
         {
-            _initialXPosition = (int) transform.position.x;
+            if (other.CompareTag(Tags.StartSign))
+            {
+                _startPoint = (int)transform.position.x;
+            }
         }
 
         private void Update()
         {
-            Points.Value = Math.Max(Points.Value, (int) transform.position.x - _initialXPosition);
+            if (_startPoint > 0)
+            {
+                Points.Value = Math.Max(Points.Value, (int)transform.position.x - _startPoint);
+            }
         }
     }
 }

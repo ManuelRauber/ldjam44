@@ -178,7 +178,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1277674275962418958}
-  m_LocalRotation: {x: 0.09583684, y: 0.9032669, z: -0.2738171, w: 0.31614628}
+  m_LocalRotation: {x: 0.095836855, y: 0.9032669, z: -0.2738171, w: 0.31614634}
   m_LocalPosition: {x: -14.76, y: 4.508, z: -3.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -688,9 +688,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5442684410540999765}
+  - component: {fileID: 5647966119315543026}
   m_Layer: 0
-  m_Name: StreetSign
-  m_TagString: Untagged
+  m_Name: StartSign
+  m_TagString: StartSign
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -717,3 +718,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5647966119315543026
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9066614090390877766}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.6202354, y: 1.9753592, z: 0.59685135}
+  m_Center: {x: -11.299269, y: 1.7522668, z: -9.136438}
