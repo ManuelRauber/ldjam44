@@ -23,14 +23,14 @@ namespace LdJam44.UI
         
         public void Restart()
         {
-            ResetVariables();
             SceneManager.LoadScene(Scenes.MrUnicornator);
+            ResetVariables();
         }
 
         public void MenuMenu()
         {
-            ResetVariables();
             SceneManager.LoadScene(Scenes.MainMenu);
+            ResetVariables();
         }
 
         public void GameOver()
