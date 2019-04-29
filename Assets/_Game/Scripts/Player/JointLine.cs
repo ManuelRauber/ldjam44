@@ -7,6 +7,8 @@ namespace LdJam44.Player
         [Header("References")]
         public SpringJoint ConnectedObject;
 
+        public Transform RealConnection;
+
         public LineRenderer LineRenderer;
 
         public bool IsEnabled
@@ -29,7 +31,7 @@ namespace LdJam44.Player
             }
             
             LineRenderer.SetPosition(0, transform.position);
-            LineRenderer.SetPosition(1, ConnectedObject.connectedBody.transform.position);
+            LineRenderer.SetPosition(1, RealConnection.position);
         }
     }
 }
