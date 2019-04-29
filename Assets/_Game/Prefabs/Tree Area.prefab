@@ -46,6 +46,16 @@ MonoBehaviour:
   TreePrefabs:
   - {fileID: 8162883206269226370, guid: bec2b774d6a3e4bfd8bba3a08af69e00, type: 3}
   - {fileID: 3483789512207926385, guid: 173541a6b92934449a8f5453ea5e41f6, type: 3}
+  - {fileID: 1372482576258450834, guid: a8f92561de9d74cd9b9e4fee42486e6d, type: 3}
+  - {fileID: 365424246339837743, guid: b220f2400f78442a4b62af412c408b7f, type: 3}
+  - {fileID: 8162883206269226370, guid: bec2b774d6a3e4bfd8bba3a08af69e00, type: 3}
+  - {fileID: 3483789512207926385, guid: 173541a6b92934449a8f5453ea5e41f6, type: 3}
+  - {fileID: 8162883206269226370, guid: bec2b774d6a3e4bfd8bba3a08af69e00, type: 3}
+  - {fileID: 3483789512207926385, guid: 173541a6b92934449a8f5453ea5e41f6, type: 3}
+  - {fileID: 8162883206269226370, guid: bec2b774d6a3e4bfd8bba3a08af69e00, type: 3}
+  - {fileID: 3483789512207926385, guid: 173541a6b92934449a8f5453ea5e41f6, type: 3}
+  - {fileID: 8162883206269226370, guid: bec2b774d6a3e4bfd8bba3a08af69e00, type: 3}
+  - {fileID: 3483789512207926385, guid: 173541a6b92934449a8f5453ea5e41f6, type: 3}
   Width: 9.2
   Height: 5
   TreeCount: 20
