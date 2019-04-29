@@ -57,21 +57,12 @@ namespace LdJam44.Player
 
         public void PlayerDispatchedSignal()
         {
-            StartCoroutine(DoPlayerDispatch());
-        }
-
-        public IEnumerator DoPlayerDispatch()
-        {
             Rigidbody.isKinematic = true;
-            yield return new WaitForEndOfFrame();
-            
+            Destroy(GetComponent<Animator>());
             transform.SetParent(null);
-            yield return new WaitForEndOfFrame();
-            
             Rigidbody.MovePosition(PlayerDispatchPoint.position);
-            yield return new WaitForEndOfFrame();
-            
             Rigidbody.isKinematic = false;
+            transform.rotation = Quaternion.identity;
         }
 
         public void DoorsOpenSignal()
