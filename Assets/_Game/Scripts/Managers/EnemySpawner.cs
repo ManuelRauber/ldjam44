@@ -14,7 +14,7 @@ namespace LdJam44.Managers
         [Header("Variables")]
         public float SpawnRate = 0.5f;
 
-        public bool IsSpawningEnabled = true;
+        public bool IsSpawningEnabled;
         public FloatVariable DriverXPosition;
         public Vector2 SpawnOffset = new Vector2(30, 0);
         public LanesVariable Lanes;
@@ -63,6 +63,11 @@ namespace LdJam44.Managers
         public void GameOver()
         {
             IsSpawningEnabled = false;
+        }
+
+        public void StartupSequenceDone()
+        {
+            IsSpawningEnabled = true;
         }
     }
 }

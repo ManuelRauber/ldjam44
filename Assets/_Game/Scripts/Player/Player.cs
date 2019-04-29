@@ -6,10 +6,20 @@ namespace LdJam44.Player
 {
     public class Player : MonoBehaviour
     {
+        [Header("References")]
+        public Collider Collider;
+
+        public GameEvent StartupSequenceDoneEvent;
+
         [Header("Variables")]
         public IntVariable Life;
 
         public GameEvent PlayerHasBeenHitEvent;
+
+        private void Awake()
+        {
+            Collider.enabled = false;
+        }
 
         private void OnTriggerEnter(Collider other)
         {
@@ -28,6 +38,21 @@ namespace LdJam44.Player
                 Life.Value -= 10;
                 PlayerHasBeenHitEvent.Raise();
             }
+        }
+
+        public void StartupSequenceDone()
+        {
+            Collider.enabled = true;
+        }
+
+        public void StartupTimelineDone()
+        {
+            StartupSequenceDoneEvent.Raise();
+        }
+
+        public void PlayerDispatchedSignal()
+        {
+            transform.SetParent(null, true);
         }
     }
 }
