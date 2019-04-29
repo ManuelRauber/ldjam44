@@ -163,12 +163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1008801711 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5747667330411069972, guid: b7ebb9c691dd840cb89c191f5868f071,
-    type: 3}
-  m_PrefabInstance: {fileID: 3049665708649730066}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1009766076
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3192,11 +3186,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6613371869178803972, guid: 6ee49c1085bce4e7089e31f56b18b326,
-        type: 3}
-      propertyPath: BloodPackPrefab
-      value: 
-      objectReference: {fileID: 1008801711}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ee49c1085bce4e7089e31f56b18b326, type: 3}
 --- !u!114 &7730358800761329342 stripped

@@ -50,11 +50,16 @@ MonoBehaviour:
   - {fileID: 5723937615383348001, guid: c05951123d6334c36b6e191523cc5c66, type: 3}
   - {fileID: 3418014628432601693, guid: b0fd15ca066e544f1a954e08efab5c17, type: 3}
   - {fileID: 1649775891390416364, guid: 753823ec0ef774547a5162adf434e496, type: 3}
+  BloodPackPrefab: {fileID: 2089676134624375439, guid: 0be1008bba3d5465dabf699331598659,
+    type: 3}
   SpawnRate: 0.5
+  BloodPackSpawnRate: 5
   IsSpawningEnabled: 0
   DriverXPosition: {fileID: 11400000, guid: ba6a6278e159d41cb9c51dfd0e2a2c41, type: 2}
   SpawnOffset: {x: 40, y: 0.09}
   Lanes: {fileID: 11400000, guid: c7e00c2a6104244d0bb15a185b129ef5, type: 2}
+  IsIntroMode: 0
+  DestroyEnemyInIntroModeAfterSeconds: 15
 --- !u!114 &6613371869178803973
 MonoBehaviour:
   m_ObjectHideFlags: 0

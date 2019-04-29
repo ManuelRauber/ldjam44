@@ -70,7 +70,8 @@ namespace LdJam44.Player
         {
             if (other.CompareTag(Tags.BloodPack))
             {
-                Life.Value = Math.Max(Life.InitialValue, Life.Value + 10);
+                Life.Value = Math.Min(Life.InitialValue, Life.Value + 20);
+                Destroy(other.gameObject);
             }
         }
 

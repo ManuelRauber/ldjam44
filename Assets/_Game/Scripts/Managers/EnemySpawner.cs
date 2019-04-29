@@ -60,7 +60,7 @@ namespace LdJam44.Managers
             var lane = Lanes.Value[laneNumber];
 
             var bloodPack = Instantiate(
-                EnemyPrefabs.PickOne(),
+                BloodPackPrefab,
                 new Vector3(SpawnOffset.x + DriverXPosition, SpawnOffset.y, lane.Position.z),
                 Quaternion.identity
             );
