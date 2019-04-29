@@ -1,5 +1,4 @@
 using LdJam44.Variables;
-using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -10,12 +9,9 @@ namespace LdJam44.UI
         [Header("References")]
         public RectTransform FillContainer;
 
-        public TextMeshProUGUI PointsText;
-
         [Header("Variables")]
         public IntVariable PlayerLife;
-        public IntVariable Points;
-
+        
         private float _maxFillHeight;
         private float _lastPlayerLife;
 
@@ -26,8 +22,6 @@ namespace LdJam44.UI
 
         private void Update()
         {
-            PointsText.text = Points.Value.ToString();
-            
             // ReSharper disable once CompareOfFloatsByEqualityOperator
             if (_lastPlayerLife == PlayerLife.Value)
             {

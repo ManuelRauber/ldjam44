@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &4220610214850116599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2858078430029991976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58cf1ea1f9894db3a2dba0314eb008bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: {fileID: 4634483840210798976}
+  Points: {fileID: 11400000, guid: 495614e7862694e2dbfa85f22d08ab3a, type: 2}
 --- !u!1 &7748011452501915080
 GameObject:
   m_ObjectHideFlags: 0
@@ -37,7 +51,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1131151648281613426
 MonoBehaviour:
@@ -217,12 +231,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22dcb20aab8eb499290caa8b20208ba3, type: 3}
+--- !u!1 &2858078430029991976 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7580413521740913922, guid: 22dcb20aab8eb499290caa8b20208ba3,
+    type: 3}
+  m_PrefabInstance: {fileID: 5664093327223131434}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6650775817329700980 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1357460909571341662, guid: 22dcb20aab8eb499290caa8b20208ba3,
     type: 3}
   m_PrefabInstance: {fileID: 5664093327223131434}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4634483840210798976 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1065691339762828458, guid: 22dcb20aab8eb499290caa8b20208ba3,
+    type: 3}
+  m_PrefabInstance: {fileID: 5664093327223131434}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2858078430029991976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5848723390586567885
 PrefabInstance:
   m_ObjectHideFlags: 0
