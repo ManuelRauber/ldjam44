@@ -10,6 +10,8 @@ namespace LdJam44.Player
         public Collider Collider;
 
         public GameEvent StartupSequenceDoneEvent;
+        public Transform PlayerDispatchPoint;
+        public JointLine JointLine;
 
         [Header("Variables")]
         public IntVariable Life;
@@ -19,6 +21,7 @@ namespace LdJam44.Player
         private void Awake()
         {
             Collider.enabled = false;
+            JointLine.IsEnabled = false;
         }
 
         private void OnTriggerEnter(Collider other)
@@ -53,6 +56,12 @@ namespace LdJam44.Player
         public void PlayerDispatchedSignal()
         {
             transform.SetParent(null, true);
+            transform.position = PlayerDispatchPoint.position;
+        }
+
+        public void DoorsOpenSignal()
+        {
+            JointLine.IsEnabled = true;
         }
     }
 }

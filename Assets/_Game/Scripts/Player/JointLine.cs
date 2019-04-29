@@ -8,6 +8,12 @@ namespace LdJam44.Player
         public SpringJoint ConnectedObject;
 
         public LineRenderer LineRenderer;
+
+        public bool IsEnabled
+        {
+            get => LineRenderer.enabled;
+            set => LineRenderer.enabled = value;
+        }
         
         private void LateUpdate()
         {
