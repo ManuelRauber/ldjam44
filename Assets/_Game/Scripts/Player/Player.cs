@@ -1,3 +1,4 @@
+using System.Collections;
 using LdJam44.EventSystem;
 using LdJam44.Variables;
 using UnityEngine;
@@ -12,6 +13,7 @@ namespace LdJam44.Player
         public GameEvent StartupSequenceDoneEvent;
         public Transform PlayerDispatchPoint;
         public JointLine JointLine;
+        public Rigidbody Rigidbody;
 
         [Header("Variables")]
         public IntVariable Life;
@@ -55,8 +57,21 @@ namespace LdJam44.Player
 
         public void PlayerDispatchedSignal()
         {
-            transform.SetParent(null, true);
-            transform.position = PlayerDispatchPoint.position;
+            StartCoroutine(DoPlayerDispatch());
+        }
+
+        public IEnumerator DoPlayerDispatch()
+        {
+            Rigidbody.isKinematic = true;
+            yield return new WaitForEndOfFrame();
+            
+            transform.SetParent(null);
+            yield return new WaitForEndOfFrame();
+            
+            Rigidbody.MovePosition(PlayerDispatchPoint.position);
+            yield return new WaitForEndOfFrame();
+            
+            Rigidbody.isKinematic = false;
         }
 
         public void DoorsOpenSignal()
