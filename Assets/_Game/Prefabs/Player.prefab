@@ -90,7 +90,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 9.1835e-41, z: 2.0387483e-38, w: 3.076489e-39}
+  m_BoundingSphereOverride: {x: 3.6e-43, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -579,17 +579,6 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1674032310}
-          m_MethodName: StartupSequenceDone
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 1674032310}
           m_MethodName: StartupTimelineDone
           m_Mode: 1

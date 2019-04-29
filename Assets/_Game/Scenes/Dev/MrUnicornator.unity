@@ -1952,12 +1952,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1fcf24ea8aa840f69d248326984c671, type: 3}
---- !u!4 &5442684410540999765 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5442684410540999765, guid: d1450a16c1418924b8fc5b2876c092e6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1009766076}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5851955390595349874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1965,33 +1959,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1297905074890679242, guid: 8ad1fb738be0a4fe089cf3d6df75f156,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4810625070603857942, guid: 8ad1fb738be0a4fe089cf3d6df75f156,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4406372765424911618, guid: 8ad1fb738be0a4fe089cf3d6df75f156,
         type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 909896843, guid: 8ad1fb738be0a4fe089cf3d6df75f156, type: 3}
-      propertyPath: m_Events.m_Events.Array.data[2].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 909896843, guid: 8ad1fb738be0a4fe089cf3d6df75f156, type: 3}
       propertyPath: m_Events.m_Events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1748045780}
-    - target: {fileID: 909896843, guid: 8ad1fb738be0a4fe089cf3d6df75f156, type: 3}
-      propertyPath: m_Events.m_Events.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartupTimelineDone
-      objectReference: {fileID: 0}
     - target: {fileID: 4406372765424911622, guid: 8ad1fb738be0a4fe089cf3d6df75f156,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2056,36 +2032,6 @@ PrefabInstance:
       propertyPath: PlayerDispatchPoint
       value: 
       objectReference: {fileID: 2141779030}
-    - target: {fileID: 7984813237728769957, guid: 8ad1fb738be0a4fe089cf3d6df75f156,
-        type: 3}
-      propertyPath: StartSign
-      value: 
-      objectReference: {fileID: 5442684410540999765}
-    - target: {fileID: 8015251864547703783, guid: 8ad1fb738be0a4fe089cf3d6df75f156,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8015251864547703783, guid: 8ad1fb738be0a4fe089cf3d6df75f156,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8015251864547703783, guid: 8ad1fb738be0a4fe089cf3d6df75f156,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8015251864547703783, guid: 8ad1fb738be0a4fe089cf3d6df75f156,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8015251864547703783, guid: 8ad1fb738be0a4fe089cf3d6df75f156,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.x
-      value: 3.6e-43
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ad1fb738be0a4fe089cf3d6df75f156, type: 3}
 --- !u!1001 &6613371870244759742
