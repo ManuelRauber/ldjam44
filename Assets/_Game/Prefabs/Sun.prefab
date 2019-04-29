@@ -110,7 +110,7 @@ MonoBehaviour:
   MaxIntensity: 1.5
   DayPercentage: 0.6
   SunRisePercentageOfDayPercentage: 0.2
-  SunDawnPercentageOfNightPercentage: 0.4
+  SunDawnPercentageOfNightPercentage: 0.2
   DayNightCycleTimeInSeconds: 35
   StartAtDay: 1
   DayTimeLength: 0
