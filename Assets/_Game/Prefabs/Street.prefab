@@ -1238,7 +1238,7 @@ PrefabInstance:
     - target: {fileID: 1995245325673981390, guid: f86fda1ca97fe4863b7ef6359a2d0d89,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.23
+      value: 9.41
       objectReference: {fileID: 0}
     - target: {fileID: 1995245325673981390, guid: f86fda1ca97fe4863b7ef6359a2d0d89,
         type: 3}
@@ -1283,7 +1283,12 @@ PrefabInstance:
     - target: {fileID: 3524079391234088758, guid: f86fda1ca97fe4863b7ef6359a2d0d89,
         type: 3}
       propertyPath: Height
-      value: 6.8
+      value: 13.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 3524079391234088758, guid: f86fda1ca97fe4863b7ef6359a2d0d89,
+        type: 3}
+      propertyPath: TreeCount
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f86fda1ca97fe4863b7ef6359a2d0d89, type: 3}
