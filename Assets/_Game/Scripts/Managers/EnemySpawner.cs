@@ -11,9 +11,13 @@ namespace LdJam44.Managers
         [Header("References")]
         public GameObject[] EnemyPrefabs;
 
+        public GameObject BloodPackPrefab;
+
         [Header("Variables")]
         public float SpawnRate = 0.5f;
-        
+
+        public float BloodPackSpawnRate = 5;
+
         public bool IsSpawningEnabled;
         public FloatVariable DriverXPosition;
         public Vector2 SpawnOffset = new Vector2(30, 0);
@@ -22,28 +26,54 @@ namespace LdJam44.Managers
         public float DestroyEnemyInIntroModeAfterSeconds = 15f;
 
         private float _timeToNextSpawn;
+        private float _timeToNextBloodPackSpawn;
 
         private void Start()
         {
             _timeToNextSpawn = Time.time;
+            _timeToNextBloodPackSpawn = Time.time;
         }
 
         private void Update()
         {
-            if (!IsSpawningEnabled || _timeToNextSpawn > Time.time)
+            if (!IsSpawningEnabled)
             {
                 return;
             }
 
-            SpawnEnemy();
-            _timeToNextSpawn = Time.time + SpawnRate;
+            if (Time.time > _timeToNextSpawn)
+            {
+                SpawnEnemy();
+                _timeToNextSpawn = Time.time + SpawnRate;
+            }
+
+            if (Time.time > _timeToNextBloodPackSpawn)
+            {
+                SpawnBloodPack();
+                _timeToNextBloodPackSpawn = Time.time + BloodPackSpawnRate;
+            }
+        }
+
+        private void SpawnBloodPack()
+        {
+            var laneNumber = Random.Range(0, Lanes.Value.Length);
+            var lane = Lanes.Value[laneNumber];
+
+            var bloodPack = Instantiate(
+                EnemyPrefabs.PickOne(),
+                new Vector3(SpawnOffset.x + DriverXPosition, SpawnOffset.y, lane.Position.z),
+                Quaternion.identity
+            );
+
+            bloodPack.transform.SetParent(transform);
+            Destroy(bloodPack, 20);
         }
 
         private void SpawnEnemy()
         {
             var laneNumber = Random.Range(0, Lanes.Value.Length);
             var lane = Lanes.Value[laneNumber];
-            
+
             var enemy = Instantiate(
                 EnemyPrefabs.PickOne(),
                 new Vector3(SpawnOffset.x + DriverXPosition, SpawnOffset.y, lane.Position.z),
