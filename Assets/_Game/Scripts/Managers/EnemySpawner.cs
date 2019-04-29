@@ -13,11 +13,13 @@ namespace LdJam44.Managers
 
         [Header("Variables")]
         public float SpawnRate = 0.5f;
-
+        
         public bool IsSpawningEnabled;
         public FloatVariable DriverXPosition;
         public Vector2 SpawnOffset = new Vector2(30, 0);
         public LanesVariable Lanes;
+        public bool IsIntroMode;
+        public float DestroyEnemyInIntroModeAfterSeconds = 15f;
 
         private float _timeToNextSpawn;
 
@@ -51,12 +53,21 @@ namespace LdJam44.Managers
             enemy.transform.SetParent(transform);
 
             var enemyController = enemy.GetComponent<EnemyController>();
-            
+            enemyController.IsIntroMode = IsIntroMode;
             enemyController.SwitchLane(laneNumber);
 
             if (Lanes.Value[laneNumber].Reverse)
             {
                 enemy.transform.eulerAngles = new Vector3(0, 180, 0);
+            }
+            else if (IsIntroMode)
+            {
+                enemy.transform.position = new Vector3(-SpawnOffset.x, SpawnOffset.y, lane.Position.z);
+            }
+
+            if (IsIntroMode)
+            {
+                Destroy(enemy.gameObject, DestroyEnemyInIntroModeAfterSeconds);
             }
         }
 

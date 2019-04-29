@@ -13,6 +13,8 @@ namespace LdJam44.Enemies
         [Header("Diagnostics")]
         public int LaneNumber;
 
+        public bool IsIntroMode;
+
         private void Start()
         {
             SwitchLane(LaneNumber);
@@ -29,7 +31,7 @@ namespace LdJam44.Enemies
         {
             Rigidbody.velocity = new Vector3(MaxAllowedSpeed, 0, TargetZPosition - transform.position.z);
 
-            if (Math.Abs(DriverXPosition - transform.position.x) > 40)
+            if (Math.Abs(DriverXPosition - transform.position.x) > 40 && !IsIntroMode)
             {
                 Destroy(gameObject);
             }
