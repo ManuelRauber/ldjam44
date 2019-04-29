@@ -107,7 +107,7 @@ MonoBehaviour:
   Light: {fileID: 2875495035188764467}
   SunDawnEvent: {fileID: 11400000, guid: b17c81aa6cbd34e5a9dafe1dd71df9dc, type: 2}
   SunRiseEvent: {fileID: 11400000, guid: 4a1ebee8bf72c4418afa7cbe5b681b2d, type: 2}
-  MaxIntensity: 4
+  MaxIntensity: 2
   DayPercentage: 0.6
   SunRisePercentageOfDayPercentage: 0.2
   SunDawnPercentageOfNightPercentage: 0.4

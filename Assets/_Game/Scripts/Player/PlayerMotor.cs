@@ -6,11 +6,11 @@ namespace LdJam44.Player
     {
         [Header("References")]
         public Rigidbody Rigidbody;
-
+        
         [Header("Variables")]
         public float MovementStrength = 30000;
 
-        private bool _isMovementEnabled = true;
+        private bool _isMovementEnabled;
 
         public void Move(Vector3 rawMovement)
         {
@@ -23,6 +23,11 @@ namespace LdJam44.Player
         public void GameOver()
         {
             _isMovementEnabled = false;
+        }
+
+        public void StartupSequenceDone()
+        {
+            _isMovementEnabled = true;
         }
     }
 }
