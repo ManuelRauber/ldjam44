@@ -1,4 +1,5 @@
 using System.Collections;
+using LdJam44.Variables;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -14,14 +15,21 @@ namespace LdJam44.UI
 
         [Header("Variables")]
         public float TimeToWaitBeforeShowingUi = 3;
+
+        public IntVariable PlayerLife;
+        public IntVariable Points;
+        public IntVariable DriverLane;
+        public FloatVariable DriverXPosition;
         
         public void Restart()
         {
+            ResetVariables();
             SceneManager.LoadScene(Scenes.MrUnicornator);
         }
 
         public void MenuMenu()
         {
+            ResetVariables();
             SceneManager.LoadScene(Scenes.MainMenu);
         }
 
@@ -40,6 +48,14 @@ namespace LdJam44.UI
             }
             
             Panel.SetActive(true);  
+        }
+
+        private void ResetVariables()
+        {
+            PlayerLife.Value = PlayerLife.InitialValue;
+            Points.Value = Points.InitialValue;
+            DriverLane.Value = DriverLane.InitialValue;
+            DriverXPosition.Value = DriverXPosition.InitialValue;
         }
     }
 }
