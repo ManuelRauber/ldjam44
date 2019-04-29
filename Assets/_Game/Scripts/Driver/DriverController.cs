@@ -1,4 +1,5 @@
 using System.Linq;
+using LdJam44.Extensions;
 using LdJam44.Variables;
 using UnityEngine;
 
@@ -16,6 +17,8 @@ namespace LdJam44.Driver
         public FloatVariable XPosition;
         public DriverSensors Sensors;
         public float LaneSpeedSwitchModifier = 1.75f;
+        public AudioSource AudioSource;
+        public AudioClip[] AudioClips;
 
         [Header("Diagnostics")]
         [SerializeField]
@@ -26,8 +29,9 @@ namespace LdJam44.Driver
 
         [SerializeField]
         private bool IsBreaking;
-        
+
         private float _timeToNextSensorScan;
+        private bool _isInitialLaneSwitchDone;
 
         private void Start()
         {
@@ -39,7 +43,7 @@ namespace LdJam44.Driver
         private void Update()
         {
             TBreakInterpolator = Mathf.Clamp01(TBreakInterpolator + BreakModifier * Time.deltaTime);
-            
+
             if (IsGameOver)
             {
                 MaxAllowedSpeed = 0;
@@ -64,6 +68,14 @@ namespace LdJam44.Driver
         public override void SwitchLane(int laneNumber)
         {
             base.SwitchLane(laneNumber);
+
+            if (_isInitialLaneSwitchDone)
+            {
+                AudioSource.PlayOneShot(AudioClips.PickOne());
+            }
+
+            _isInitialLaneSwitchDone = true;
+
             StopBreaking();
         }
 
@@ -92,7 +104,7 @@ namespace LdJam44.Driver
                 {
                     StopBreaking();
                 }
-                
+
                 return;
             }
 
@@ -140,8 +152,8 @@ namespace LdJam44.Driver
             base.FixedUpdate();
 
             Rigidbody.velocity = new Vector3(
-                Mathf.Lerp(CurrentSpeed, MaxAllowedSpeed, TBreakInterpolator), 
-                0, 
+                Mathf.Lerp(CurrentSpeed, MaxAllowedSpeed, TBreakInterpolator),
+                0,
                 (TargetZPosition - transform.position.z) * LaneSpeedSwitchModifier);
         }
 
